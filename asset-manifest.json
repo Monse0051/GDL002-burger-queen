@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/GDL002-burguer-queen/my-app/static/css/main.06fcdcb9.chunk.css",
-    "main.js": "/GDL002-burguer-queen/my-app/static/js/main.474ecb68.chunk.js",
-    "main.js.map": "/GDL002-burguer-queen/my-app/static/js/main.474ecb68.chunk.js.map",
-    "runtime~main.js": "/GDL002-burguer-queen/my-app/static/js/runtime~main.03941d2d.js",
-    "runtime~main.js.map": "/GDL002-burguer-queen/my-app/static/js/runtime~main.03941d2d.js.map",
-    "static/js/2.6eb5c426.chunk.js": "/GDL002-burguer-queen/my-app/static/js/2.6eb5c426.chunk.js",
-    "static/js/2.6eb5c426.chunk.js.map": "/GDL002-burguer-queen/my-app/static/js/2.6eb5c426.chunk.js.map",
-    "index.html": "/GDL002-burguer-queen/my-app/index.html",
-    "precache-manifest.e4defdd148b12558f95ba37f9c2aab7d.js": "/GDL002-burguer-queen/my-app/precache-manifest.e4defdd148b12558f95ba37f9c2aab7d.js",
-    "service-worker.js": "/GDL002-burguer-queen/my-app/service-worker.js",
-    "static/css/main.06fcdcb9.chunk.css.map": "/GDL002-burguer-queen/my-app/static/css/main.06fcdcb9.chunk.css.map"
+    "main.css": "/GDL002-burguer-queen/static/css/main.06fcdcb9.chunk.css",
+    "main.js": "/GDL002-burguer-queen/static/js/main.03603817.chunk.js",
+    "main.js.map": "/GDL002-burguer-queen/static/js/main.03603817.chunk.js.map",
+    "runtime~main.js": "/GDL002-burguer-queen/static/js/runtime~main.2db8c3e2.js",
+    "runtime~main.js.map": "/GDL002-burguer-queen/static/js/runtime~main.2db8c3e2.js.map",
+    "static/js/2.fd31e448.chunk.js": "/GDL002-burguer-queen/static/js/2.fd31e448.chunk.js",
+    "static/js/2.fd31e448.chunk.js.map": "/GDL002-burguer-queen/static/js/2.fd31e448.chunk.js.map",
+    "index.html": "/GDL002-burguer-queen/index.html",
+    "precache-manifest.9f50b50f52bffee396516d2dd20644bd.js": "/GDL002-burguer-queen/precache-manifest.9f50b50f52bffee396516d2dd20644bd.js",
+    "service-worker.js": "/GDL002-burguer-queen/service-worker.js",
+    "static/css/main.06fcdcb9.chunk.css.map": "/GDL002-burguer-queen/static/css/main.06fcdcb9.chunk.css.map"
   }
 }
