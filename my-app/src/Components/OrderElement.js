@@ -14,8 +14,9 @@ class OrderElement extends React.Component{
 
     render() {
         return <div className="OrderElement">
-                    <h3>{this.props.food.descripcion}</h3>
-                    <button onClick={this.onDelete}>Eliminar</button>
+                    <h3>{this.props.food.descripcion}  ${this.props.food.precio}</h3>
+                    <button className="btn btn-info btn-lg" onClick={this.onDelete}>
+                        Eliminar</button>
                 </div>;
     }
 }

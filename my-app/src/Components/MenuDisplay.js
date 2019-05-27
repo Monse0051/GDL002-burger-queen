@@ -1,5 +1,7 @@
 import React from 'react';
 import Food from './Food';
+import Total from './Total';
+import SendTo from './SendTo';
 import OrderElement  from './OrderElement'
 
 
@@ -8,9 +10,11 @@ class MenuDisplay extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            orderList : []
+            orderList : [],
+            tableNumber: 0
         };
         this.onHandleOrder = this.onHandleOrder.bind(this);
+        this.onSend = this.onSend.bind(this);
     }
 
     onHandleOrder(food){
@@ -29,6 +33,11 @@ class MenuDisplay extends React.Component {
         this.setState({orderList: newOrderList});
     }
 
+    onSend(){
+        console.log("DEBUG: Enviando a cocina");
+        this.setState({orderList: []});
+    }
+
     render(){
         let menuList = [];
 
@@ -44,6 +53,13 @@ class MenuDisplay extends React.Component {
                 </div>);
         }
 
+        let total = 0;
+
+        for (let index = 0; index < this.state.orderList.length; index++) {
+            const order =  this.state.orderList[index];
+            total += order.precio;
+        }
+
         return <div className="MenuDisplay">
             <div className="MenuList">
                 <ol>
@@ -52,7 +68,7 @@ class MenuDisplay extends React.Component {
             </div>
             <div className="container">
                 <ol>
-                {this.state.orderList.map((food, index) => {
+                    {this.state.orderList.map((food, index) => {
                         return (
                             <OrderElement
                                 key={food.id + "_" + index.toString()}
@@ -60,6 +76,15 @@ class MenuDisplay extends React.Component {
                                 onClickRemove={()=>this.onRemove(index)}
                             />);
                     })}
+                    <Total
+                        total={total}
+                    />
+                    <SendTo
+                        order={this.state.orderList}
+                        table={this.state.tableNumber}
+                        enabled={total>0}
+                        onSend={this.onSend}
+                    />
                 </ol>
             </div>
         </div>;
