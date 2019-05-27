@@ -1,60 +1,9 @@
 import React from 'react';
+import {BrowserRouter, Route} from "react-router-dom"
 import MenuType from './Components/MenuType';
-
-const comidas = [
-  {
-    type: "Hamburguesa", descripcion:"Hamburguesa simple", 
-    sabor:{
-      eleccion:"res", 
-      opciones:["res", "pollo", "vegetariana"]
-    }, 
-    extra:{
-      costo: 1.0,
-      eleccion:"",
-      opciones: ["huevo", "queso"]
-    },  
-    precio: 10.00
-  },
-
-  {
-    type: "Hamburguesa", descripcion:"Hamburguesa doble", 
-    sabor:{
-      eleccion:"res", 
-      opciones:["res", "pollo", "vegetariana"]
-    }, 
-    extra:{
-      costo: 1.0,
-      eleccion:"",
-      opciones: ["huevo", "queso"]
-    },  
-    precio: 15.00
-  },
-
-  {
-   type : "acompañamiento",
-    precio: 5.00,
-    descripcion: "papas fritas"
-  },
-  
-  {
-    type: "bebida",
-    precio: 5.00,
-    descripcion: "agua 500ml"
-    
-  },
-  {
-    type: "bebida",
-    precio: 7.00,
-    descripcion: "agua 750ml"
-  },
-
-  {
-    type: "bebida",
-    precio: 7.00,
-    descripcion: "bebida/gaseosa 500ml"
-  }
-];
-
+import Navbar from './Components/Navbar';
+import './Components/Navbar.css';
+import Cocina from './Components/Cocina'
 
 class App extends React.Component {
 
@@ -69,8 +18,7 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    // TODO: firebase conexion
-    const firebase = require("firebase");
+    const firebase = require("firebase/firebase");
     // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyCjy0hWWi5gvz23Pm87OmnWA00vLSjx-SA",
@@ -116,19 +64,21 @@ class App extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
+        <BrowserRouter>
         <div className="Burguer-Queen">
-          <div className="numero de mesa">
-            <input></input>
+            <Navbar/>
+          <div className="numero de mesa"> 
           </div>
-
           <div className="Menus">
-            <MenuType
+            <Route exact path = "/" render = {()=> <MenuType
               menu={menu}
               id = {this.ID}
-            />
+            />}/>
+            <Route path = "/Cocina" render = {()=> <Cocina/>}/>    
           </div>
 
         </div>
+        </BrowserRouter>
       );
     }
   }
