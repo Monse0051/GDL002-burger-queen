@@ -1,4 +1,5 @@
 import React from 'react';
+import firebase from 'firebase/firebase';
 
 class SendTo extends React.Component {
     constructor(props){
@@ -9,7 +10,6 @@ class SendTo extends React.Component {
     }
 
     componentDidMount(){
-        const firebase = require("firebase/firebase");
         const app = firebase.app();
         this.dataBase = app.firestore();
     }

@@ -4,6 +4,7 @@ import MenuType from './Components/MenuType';
 import Navbar from './Components/Navbar';
 import './Components/Navbar.css';
 import Cocina from './Components/Cocina'
+import firebase from 'firebase/firebase';
 
 class App extends React.Component {
 
@@ -18,7 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    const firebase = require("firebase/firebase");
+
     // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyCjy0hWWi5gvz23Pm87OmnWA00vLSjx-SA",
