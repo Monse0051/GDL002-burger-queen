@@ -1,10 +1,10 @@
 import React from 'react';
-import {BrowserRouter, Route} from "react-router-dom"
+import {HashRouter, Route} from "react-router-dom"
 import MenuType from './Components/MenuType';
 import Navbar from './Components/Navbar';
 import './Components/Navbar.css';
 import Cocina from './Components/Cocina'
-import firebase from 'firebase/firebase';
+import firebase from 'firebase';
 
 class App extends React.Component {
 
@@ -65,7 +65,7 @@ class App extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <BrowserRouter>
+        <HashRouter>
         <div className="Burguer-Queen">
             <Navbar/>
           <div className="numero de mesa"> 
@@ -79,7 +79,7 @@ class App extends React.Component {
           </div>
 
         </div>
-        </BrowserRouter>
+        </HashRouter>
       );
     }
   }
