@@ -23,7 +23,7 @@ class SendTo extends React.Component {
             date: Date.now()    
         }
 
-        let setOrder = this.dataBase.collection("Ordenes").doc().set(order);
+        this.dataBase.collection("Ordenes").doc().set(order);
 
         this.props.onSend();
     }
